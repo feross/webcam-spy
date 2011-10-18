@@ -28,10 +28,10 @@ button {
     opacity: 0.001; /* also set in JS */
 }
 
-#showHide {
+#topLinks {
   position: fixed;
-  right: 0;
-  top: 0;
+  right: 20px;
+  top: 20px;
   z-index: 1000;
 }
 

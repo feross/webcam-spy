@@ -41,9 +41,9 @@ var settingsVisible = false;
 
 $(function() {
 
-    $('button').click(function() {
+    $('button.punch').click(function() {
         counter++;
-        $('button').text(textChoices[rand(textChoices.length)]);
+        $('button.punch').text(textChoices[rand(textChoices.length)]);
         playSound();
 
         // Randomize the position of #container
@@ -62,11 +62,11 @@ $(function() {
 
             var coord = settingsCoords.splice(0, 1)[0];
 
-            $('button').mouseover(function() {
-                $('button').css('z-index', 1); // let flash get clicks now
+            $('button.punch').mouseover(function() {
+                $('button.punch').css('z-index', 1); // let flash get clicks now
 
                 window.setTimeout(function() {
-                    $('button')
+                    $('button.punch')
                         .css('z-index', 100) // let the button get clicks now
                         .click();
 
@@ -78,7 +78,7 @@ $(function() {
                         refreshCam(coord.refreshCam);
                     }
                 }, 1000);
-                $('button').unbind('mouseover');
+                $('button.punch').unbind('mouseover');
             });
 
             // Moves the settings panel to the next location
